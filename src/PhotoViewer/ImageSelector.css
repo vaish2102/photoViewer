@@ -1,0 +1,15 @@
+.thumbnailDiv{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    /*max-width:700px;*/
+    width:800px;
+}
+
+
+.thumbnailImage{
+    border:1px solid gray;
+    border-radius:5px;
+    padding:5px;
+    width:100px;
+}

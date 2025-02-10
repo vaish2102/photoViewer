@@ -1,3 +1,14 @@
-.mainphoto{
-   padding:0px;
+.mainImgDiv{
+   padding:20px;
+   /*max-width:700px;*/
+   width:800px;
+
+}
+
+.mainImg{
+   border:1px solid gray;
+   border-radius:5px;
+   padding:5px;
+  /* max-width:700px;*/
+  width:700px;
 }
