@@ -15,15 +15,22 @@ function getImageUrls() {
     return urls;
 }
 
+interface ImageSelectorProps {
+    handleClick:(newValue:string)=> void;
+}
 export const imageUrls = getImageUrls();  
 
-export function ImageSelector(onChange:any) {  
+export function ImageSelector({handleClick}:ImageSelectorProps) {  
+
     return ( 
+        <>
         <div className="thumbnailDiv">
             {
-            imageUrls.map((url) => <div> <img className="thumbnailImage" src={url} onClick={onChange(url)}/> </div>)
+            imageUrls.map((url,index) => <div key={index}> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
             }
         </div>
+        
+        </>
         
     );
 }

@@ -7,18 +7,13 @@ import './App.css'
 
 
 function App() {
-  const [selectedImageUrl,setSelectedImageUrl]= useState('');
-
-  function handleImageChange(url:string){
-    setSelectedImageUrl((selectedImageUrl)=> url);
-  }
-
+  const [selectedImageUrl,setSelectedImageUrl]= useState('https://picsum.photos/id/29/500/500');
+ 
   return (
     <div>
       <h1> React Photo Viewer </h1>
-      <PhotoViewer src={selectedImageUrl} /> 
-      
-      <ImageSelector onChange={handleImageChange}/>
+      <PhotoViewer src={selectedImageUrl}/> 
+      <ImageSelector handleClick={(url) =>setSelectedImageUrl(url)}/>
     </div>
   )
 }
