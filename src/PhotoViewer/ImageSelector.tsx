@@ -1,6 +1,7 @@
 import './ImageSelector.css';
  
 const brokenImages = [ 1, 24, 32, 36, 44, 47];
+
 function getImageUrls() {
     const urls = [];
     for (let i = 0; i < 50; i++) {
@@ -19,10 +20,11 @@ export const imageUrls = getImageUrls();
 
 export function ImageSelector({handleClick}:ImageSelectorProps) {  
     return ( 
-        <>
+        <>  
+            <p className='TextInstruction'> Select your photo</p>
             <div className="imageSelector">
                 {
-                 imageUrls.map((url,index) => <div key={index}> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
+                 imageUrls.map((url,index) => <div key={index} className="selImg"> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
                 }
             </div>
         

@@ -1,10 +1,7 @@
 .selectedImage{
-   padding:20px;
-   width:800px;
+   width:830px;
+   height:600px;
+   margin:5px;
+   border-radius:5px;
 }
 
-.mainphotoframe{
-   border-radius:5px;
-   padding:5px;
-   width:800px;
-}

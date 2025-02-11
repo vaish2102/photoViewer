@@ -8,9 +8,13 @@
 
 .thumbnailImage{
     border-radius:5px;
-    padding:5px;
+    margin:5px;
     width:200px;
     cursor: pointer;
+}
+
+.thumbnailImage:active{
+    box-shadow: 2px 2px 2px 2px rgb(116, 194, 168);
 }
 
 
