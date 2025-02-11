@@ -5,4 +5,7 @@
   text-align: center;
 }
 
-
+.TextInstruction{
+  text-align: left;
+  font-weight: bold;
+}

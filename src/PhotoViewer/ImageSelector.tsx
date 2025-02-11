@@ -1,8 +1,5 @@
-import React from "react"; 
-import { useState } from 'react'
 import './ImageSelector.css';
  
-
 const brokenImages = [ 1, 24, 32, 36, 44, 47];
 function getImageUrls() {
     const urls = [];
@@ -21,14 +18,13 @@ interface ImageSelectorProps {
 export const imageUrls = getImageUrls();  
 
 export function ImageSelector({handleClick}:ImageSelectorProps) {  
-
     return ( 
         <>
-        <div className="thumbnailDiv">
-            {
-            imageUrls.map((url,index) => <div key={index}> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
-            }
-        </div>
+            <div className="imageSelector">
+                {
+                 imageUrls.map((url,index) => <div key={index}> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
+                }
+            </div>
         
         </>
         
