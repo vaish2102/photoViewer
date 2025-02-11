@@ -24,7 +24,13 @@ export function ImageSelector({handleClick}:ImageSelectorProps) {
             <p className='TextInstruction'> Select your photo</p>
             <div className="imageSelector">
                 {
-                 imageUrls.map((url,index) => <div key={index} className="selImg"> <img className="thumbnailImage" src={url} onClick={(event)=>handleClick(event.target.src)} /></div>)
+                 imageUrls.map((url,index) => 
+                 <div key={index}>
+                    <button className="selImage" onClick={()=>handleClick(url)} >
+                        <img className="thumbnailImage" src={url} alt={url}/>
+                    </button> 
+                 </div>
+                )
                 }
             </div>
         
